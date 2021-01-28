@@ -14,4 +14,28 @@ import java.util.ArrayList;
 public class Product {
     String name;
     ArrayList<OneInstance> cars = new ArrayList<OneInstance>();
+
+    public Product(String name) {
+        this.name = name;
+    }
+    
+    
+
+    public String getName() {
+        return name;
+    }
+
+    public void setName(String name) {
+        this.name = name;
+    }
+
+    public ArrayList<OneInstance> getCars() {
+        return cars;
+    }
+
+    public void setCars(ArrayList<OneInstance> cars) {
+        this.cars = cars;
+    }
+    
+    
 }

@@ -10,15 +10,22 @@ package ch.bbbaden.tracker;
  * @author timon
  */
 public class OneInstance {
-    double Price;
+    double price;
     long time;
 
+    public OneInstance(double price, long time) {
+        this.price = price;
+        this.time = time;
+    }
+    
+    
+
     public double getPrice() {
-        return Price;
+        return price;
     }
 
-    public void setPrice(double Price) {
-        this.Price = Price;
+    public void setPrice(double price) {
+        this.price = price;
     }
 
     public long getTime() {
@@ -30,5 +37,6 @@ public class OneInstance {
     }
     
     
+
     
 }
