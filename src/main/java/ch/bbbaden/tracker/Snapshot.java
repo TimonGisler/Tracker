@@ -9,11 +9,11 @@ package ch.bbbaden.tracker;
  *
  * @author timon
  */
-public class OneInstance {
+public class Snapshot {
     double price;
     long time;
 
-    public OneInstance(double price, long time) {
+    public Snapshot(double price, long time) {
         this.price = price;
         this.time = time;
     }

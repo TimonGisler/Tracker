@@ -13,7 +13,7 @@ import java.util.ArrayList;
  */
 public class Product {
     String name;
-    ArrayList<OneInstance> cars = new ArrayList<OneInstance>();
+    ArrayList<Snapshot> productSnapshot = new ArrayList<Snapshot>();
 
     public Product(String name) {
         this.name = name;
@@ -29,12 +29,12 @@ public class Product {
         this.name = name;
     }
 
-    public ArrayList<OneInstance> getCars() {
-        return cars;
+    public ArrayList<Snapshot> getCars() {
+        return productSnapshot;
     }
 
-    public void setCars(ArrayList<OneInstance> cars) {
-        this.cars = cars;
+    public void setCars(ArrayList<Snapshot> cars) {
+        this.productSnapshot = cars;
     }
     
     
