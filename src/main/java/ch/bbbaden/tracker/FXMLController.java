@@ -31,13 +31,15 @@ public class FXMLController implements Initializable {
         trackedProducts.put(url, new Product(w.getName(url, false)));
 
     }
+    
+    
 
     public void update() {
         Product product;
         for (Map.Entry<String, Product> entry : trackedProducts.entrySet()) {
             product = entry.getValue();
-            
-            
+
+            product.getProductSnapshotList().add(new Snapshot(w.getCurrentPrice(entry.getKey()), System.currentTimeMillis()));
         }
     }
 

@@ -13,13 +13,11 @@ import java.util.ArrayList;
  */
 public class Product {
     String name;
-    ArrayList<Snapshot> productSnapshot = new ArrayList<Snapshot>();
+    ArrayList<Snapshot> productSnapshotList = new ArrayList<Snapshot>();
 
     public Product(String name) {
         this.name = name;
     }
-    
-    
 
     public String getName() {
         return name;
@@ -29,13 +27,19 @@ public class Product {
         this.name = name;
     }
 
-    public ArrayList<Snapshot> getCars() {
-        return productSnapshot;
+    public ArrayList<Snapshot> getProductSnapshotList() {
+        return productSnapshotList;
     }
 
-    public void setCars(ArrayList<Snapshot> cars) {
-        this.productSnapshot = cars;
+    public void setProductSnapshotList(ArrayList<Snapshot> productSnapshotList) {
+        this.productSnapshotList = productSnapshotList;
     }
+
+
+    
+    
+
+
     
     
 }

@@ -40,7 +40,7 @@ public class WebScraper {
         
         try {
             d = Jsoup.connect(url).get();
-            String price = d.getElementsByClass("ZZcl").text();
+            String price = d.getElementsByClass("ZZhz").text();
             price = removeFromString(price, ".–");
 
             doublePrice = convertStringToDouble(price);
