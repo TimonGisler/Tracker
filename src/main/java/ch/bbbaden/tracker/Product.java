@@ -5,13 +5,14 @@
  */
 package ch.bbbaden.tracker;
 
+import java.io.Serializable;
 import java.util.ArrayList;
 
 /**
  *
  * @author timon
  */
-public class Product {
+public class Product implements Serializable{
     String name;
     ArrayList<Snapshot> productSnapshotList = new ArrayList<Snapshot>();
 

@@ -5,11 +5,13 @@
  */
 package ch.bbbaden.tracker;
 
+import java.io.Serializable;
+
 /**
  *
  * @author timon
  */
-public class Snapshot {
+public class Snapshot implements Serializable{
     double price;
     long time;
 

@@ -16,11 +16,10 @@ public class WebScraper {
 
     Document d = null;
 
-    public String getName(String url, boolean urlChanged) {
+    public String getName(String url) {
         String name = null;
 
         //If url changed get new html file, if it remained the same, just use safed file.
-        if (urlChanged && !d.equals(null)) {
             try {
                 d = Jsoup.connect(url).get();
                 name = d.getElementsByClass("productHeaderTitle__Name-jqo5ci-1").text();
@@ -28,9 +27,7 @@ public class WebScraper {
             } catch (Exception e) {
                 e.printStackTrace();
             }
-        } else {
-            name = d.getElementsByClass("productHeaderTitle__Name-jqo5ci-1").text();
-        }
+
 
         return name;
     }
@@ -45,13 +42,12 @@ public class WebScraper {
 
             doublePrice = convertStringToDouble(price);
 
-            System.out.println(doublePrice);
 
         } catch (Exception e) {
             e.printStackTrace();
         }
 
-        return 0;
+        return doublePrice;
     }
 
     public double convertStringToDouble(String stringPrice) {
